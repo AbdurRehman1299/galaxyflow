@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import Dashboard from "./pages/Dashboard";
 import ProjectDetails from "./pages/ProjectDetails";
 import Projects from "./pages/Projects";
+import TaskDetails from "./pages/TaskDetails";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route index element={<Dashboard />} />
             <Route path="projects" element={<Projects />} />
             <Route path="projectsDetail" element={<ProjectDetails />} />
+            <Route path="taskDetails" element={<TaskDetails />} />
         </Route>
       </Routes>
     </>
