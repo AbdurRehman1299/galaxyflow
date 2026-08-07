@@ -21,5 +21,19 @@ const syncUserCreation = inngest.createFunction(
   },
 );
 
+// Inngest function to delete user from database
+const syncUserDeletion = inngest.createFunction(
+  { id: "delete-user-with-clerk" },
+  { event: "clerk/user.deleted" },
+  async ({ event }) => {
+    const { data } = event;
+    await prisma.user.delete({
+      where: {
+        id: data.id,
+      },
+    });
+  },
+);
+
 // Create an empty array where we'll export future Inngest functions
 export const functions = [];
