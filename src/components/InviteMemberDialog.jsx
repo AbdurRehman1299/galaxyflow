@@ -12,7 +12,7 @@ const InviteMemberDialog = ({ isDialogOpen, setIsDialogOpen }) => {
     role: "org:member",
   });
 
-  const handleSumbit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   };
 
@@ -37,7 +37,7 @@ const InviteMemberDialog = ({ isDialogOpen, setIsDialogOpen }) => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSumbit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email */}
           <div className="space-y-2">
             <label

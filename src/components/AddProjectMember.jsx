@@ -20,7 +20,7 @@ const AddProjectMember = ({ isDialogOpen, setIsDialogOpen }) => {
   const [email, setEmail] = useState("");
   const [isAdding, setIsAdding] = useState(false);
 
-  const handleSumbit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   };
 
@@ -45,7 +45,7 @@ const AddProjectMember = ({ isDialogOpen, setIsDialogOpen }) => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSumbit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email */}
           <div className="space-y-2">
             <label

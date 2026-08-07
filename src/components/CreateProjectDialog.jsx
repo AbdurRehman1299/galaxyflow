@@ -19,7 +19,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSumbit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   };
 
@@ -36,7 +36,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
       <div className="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 w-full max-w-lg text-zinc-900 dark:text-zinc-200 relative">
         <button
           className="absolute top-3 right-3 text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200"
-          onClick={() => setIsDialog(false)}
+          onClick={() => setIsDialogOpen(false)}
         >
           <XIcon className="size-5" />
         </button>
@@ -51,7 +51,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
           </p>
         )}
 
-        <form onSubmit={handleSumbit} className="space-y-2">
+        <form onSubmit={handleSubmit} className="space-y-2">
           {/* Project Name */}
           <div>
             <label className="block text-sm mb-1">Project Name</label>
@@ -191,7 +191,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
               {currentWorkspace?.members
                 ?.filter((email) => !formData.team_members.includes(email))
                 .map((member) => (
-                  <option key={member.user.email} value={member.email}>
+                  <option key={member.user.email} value={member.user.email}>
                     {member.user.email}
                   </option>
                 ))}

@@ -66,7 +66,7 @@ const ProjectTasks = ({ tasks }) => {
         (!status || task.status === status) &&
         (!type || task.type === type) &&
         (!priority || task.priority === priority) &&
-        (!assignee || task.assignee === assignee)
+        (!assignee || task.assignee?.name === assignee)
       );
     });
   }, [filters, tasks]);
