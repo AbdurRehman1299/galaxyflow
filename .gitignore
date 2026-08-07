@@ -1,0 +1,25 @@
+# Dependencies
+website/node_modules/
+server/node_modules/
+
+# Environment files
+website/.env
+website/.env.local
+server/.env
+server/.env.local
+
+# Build output
+website/dist/
+website/build/
+server/dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
